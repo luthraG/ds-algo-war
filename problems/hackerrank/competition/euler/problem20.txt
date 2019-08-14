@@ -1,0 +1,17 @@
+n! means n * (n-1) * (n-2)!
+The sum of the digits in the number 10! is 27.
+
+Find the sum of the digits in the number N!
+
+Input Format
+
+The first line contains an integer T, i.e., number of test cases. 
+Next T lines will contain an integer N.
+
+Constraints
+1 <= T <= 100
+1 <= N <= 1000
+
+Output Format
+
+Print the values corresponding to each test case.
