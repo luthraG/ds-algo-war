@@ -7,25 +7,26 @@
 
     Find the sum of the digits in the number 100!
 
-Algorithm 1:: Use simple multiplication
+Algorithm 2:: Use recursive approach
 '''
 
 from timeit import default_timer as timer
 
+def factorial(number):
+    if number <= 1:
+        return 1
+    else:
+        return number * factorial(number - 1)
+
 if __name__ == '__main__':
     number = int(input('Enter the number :: '))
-    number2 = number
     start = timer()
-    fact = 1
+    fact = factorial(number)
     sum = 0
-    while number > 0:
-        fact *= number
-        number -= 1
-    
     while fact != 0:
         sum += fact % 10
         fact //= 10
-    
-    print('Sum of digits in factorial of {} is {}'.format(number2, sum))
+
+    print('Sum of digits in factorial of {} is {}'.format(number, sum))
     end = timer()
     print('Time taken is : {}'.format(end - start))
