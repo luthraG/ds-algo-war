@@ -25,11 +25,11 @@ def sumOfPrimes(number):
     return sum
 if __name__ == '__main__':
     test_cases = int(input('Enter the test cases :: '))
+    max_limit = 1000000
+    sum = sumOfPrimes(max_limit)
     for t in range(test_cases):
         number = int(input('Enter the number :: '))
         start = timer()
-        max_limit = 1000000
-        sum = sumOfPrimes(max_limit)
         print('Sum of primes not greater than {} is {}'.format(number, sum[number]))
         end = timer()
         print('Time taken is : {}'.format(end - start))
