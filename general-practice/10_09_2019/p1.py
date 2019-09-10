@@ -13,19 +13,29 @@ class ArraySetOperations:
 
     def union(self, array1, array2, length1, length2):
         union_value = []
+        handled = {}
 
         i = 0
         j = 0
 
         while i < length1 and j < length2:
             if array1[i] < array2[j]:
-                union_value.append(array1[i])
+                value = array1[i]
+                if value not in handled:
+                    union_value.append(array1[i])
+                    handled[value] = True
                 i += 1
             elif array2[j] < array1[i]:
-                union_value.append(array2[j])
+                value = array2[j]
+                if value not in handled:
+                    union_value.append(array2[j])
+                    handled[value] = True
                 j += 1
             else:
-                union_value.append(array1[i])
+                value = array1[i]
+                if value not in handled:
+                    union_value.append(array1[i])
+                    handled[value] = True
                 i += 1
                 j += 1
 
