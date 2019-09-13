@@ -11,7 +11,6 @@
 from timeit import default_timer as timer
 
 def largest_common_prefix(item1 = '', item2 = ''):
-    print('item1 : {} and item2: {}'.format(item1, item2))
     common_prefix = ''
     if item1 == '' or item2 == '':
         common_prefix = ''
