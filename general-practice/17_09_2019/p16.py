@@ -28,10 +28,11 @@ def can_construct_string(str1):
     limit = length // 2
 
     while i <= limit:
-        times = length // i
-        if str1[:i] * times == str1:
-            return True
-        i += 1
+        if length % i == 0:
+            times = length // i
+            if str1[:i] * times == str1:
+                return True
+            i += 1
     return False
 
 str1 = str(input('Enter input string :: '))
