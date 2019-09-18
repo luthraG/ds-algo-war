@@ -21,8 +21,8 @@
     Follow up:
     Coud you solve it without converting the integer to a string?
 
-    Runtime: 92 ms, faster than 16.00% of Python3 online submissions for Palindrome Number.
-    Memory Usage: 14.2 MB, less than 6.50% of Python3 online submissions for Palindrome 
+    Runtime: 80 ms, faster than 36.74% of Python3 online submissions for Palindrome Number.
+    Memory Usage: 14.1 MB, less than 6.50% of Python3 online submissions for Palindrome Number.
 
 '''
 
@@ -34,11 +34,9 @@ def is_palindrome(num):
         reverse = 0
         x = num
         while x:
-            x, remainder = divmod(x, 10)
+            remainder = x % 10
             reverse = 10 * reverse + remainder
-        
-        if num == reverse:
-            return True
-        else:
-            return False
+            x //= 10
+
+        return num == reverse
 
