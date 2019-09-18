@@ -18,6 +18,12 @@
     1. sum is given
     2. First number I know
     3. Sum - first number --> iterates to check second number
+
+    Result:
+
+    Runtime: 3136 ms, faster than 23.07% of Python3 online submissions for Two Sum.
+    Memory Usage: 14.9 MB, less than 11.62% of Python3 online submissions for Two Sum.
+
 '''
 
 def sum_of_two_numbers(nums, target):
